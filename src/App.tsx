@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     const fetchServerInfo = async () => {
       try {
-        const response = await axios.get<ServerResponse>('http://localhost:3000/api/server-info')
+        const response = await axios.get<ServerResponse>('https://battlefield-1-khl1.onrender.com/api/server-info')
         setServerInfo(response.data)
       } catch (err) {
         setError("Failed to fetch server information")
