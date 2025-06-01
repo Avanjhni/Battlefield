@@ -43,6 +43,7 @@ function App() {
       try {
         const response = await axios.get<ServerResponse>('https://battlefield-1-khl1.onrender.com/api/server-info')
         setServerInfo(response.data)
+        console.log("Response :", response)
       } catch (err) {
         setError("Failed to fetch server information")
       }
